@@ -52,11 +52,11 @@ public class MainMenuManager : MonoBehaviour
 
     void PlayGame()
     {
-        
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Rogue");
     }
 
     void QuitGame()
     {
-        
+        Application.Quit();
     }
 }

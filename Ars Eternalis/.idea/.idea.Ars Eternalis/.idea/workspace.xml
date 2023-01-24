@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4e4de74-58c7-430c-b47b-73100006e987" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Ars Eternalis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Ars Eternalis/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UI Toolkit/Main Menu/mainMenu.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UI Toolkit/Main Menu/mainMenu.uxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenuManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenuManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674550638049</updated>
-      <workItem from="1674550641802" duration="11862000" />
+      <workItem from="1674550641802" duration="12144000" />
     </task>
     <servers />
   </component>
