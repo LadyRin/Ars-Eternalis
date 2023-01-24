@@ -1,14 +1,3 @@
-<<<<<<< Updated upstream
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Toolkit/Main%20Menu/style.uss?fileID=7433441132597879392&amp;guid=cd4bcb88b81d84e369fdc7fa5297ef1c&amp;type=3#style" />
-    <ui:VisualElement name="root">
-        <ui:VisualElement name="boutons-container">
-            <ui:Button text="Jouer" display-tooltip-when-elided="true" name="play" style="-unity-font: url(&apos;project://database/Assets/UI%20Toolkit/fonts/BMYEONSUNG_ttf.ttf?fileID=12800000&amp;guid=21c4c1e29dda3480da590f8326c87ab3&amp;type=3#BMYEONSUNG_ttf&apos;); -unity-font-style: normal; -unity-font-definition: url(&apos;project://database/Assets/UI%20Toolkit/fonts/BMYEONSUNG_ttf%20SDF.asset?fileID=11400000&amp;guid=edf608a7da7bf47278dec22871159892&amp;type=2#BMYEONSUNG_ttf SDF&apos;);" />
-            <ui:Button text="Quitter" display-tooltip-when-elided="true" name="quit" style="-unity-font-definition: url(&apos;project://database/Assets/UI%20Toolkit/fonts/BMYEONSUNG_ttf%20SDF.asset?fileID=11400000&amp;guid=edf608a7da7bf47278dec22871159892&amp;type=2#BMYEONSUNG_ttf SDF&apos;);" />
-        </ui:VisualElement>
-    </ui:VisualElement>
-</ui:UXML>
-=======
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Toolkit/Main%20Menu/style.uss?fileID=7433441132597879392&amp;guid=cd4bcb88b81d84e369fdc7fa5297ef1c&amp;type=3#style" />
     <ui:VisualElement name="root">
@@ -18,4 +7,3 @@
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
->>>>>>> Stashed changes
