@@ -15,11 +15,14 @@ public class PlayerStateMachine : MonoBehaviour
     Vector2 inputMove;
     Vector2 inputLook;
     bool isJumping;
+    bool isFiring;
     [SerializeField] float mouseSensitivity;
     [SerializeField] float moveSpeed;
     [SerializeField] float jumpForce;
+    [SerializeField] float airAcceleration;
+    [SerializeField] float maxAirSpeed;
     CinemachineVirtualCamera mainCamera;
-    protected Rigidbody rb;
+    Rigidbody rb;
 
     void InitStates() {
         groundedState = new PlayerGroundedState(this);
@@ -35,11 +38,13 @@ public class PlayerStateMachine : MonoBehaviour
         InitStates();
     
         currentState = groundedState;
+        currentState.EnterState();
     }
 
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -61,6 +66,10 @@ public class PlayerStateMachine : MonoBehaviour
         isJumping = context.ReadValueAsButton();
     }
 
+    public void OnFire(InputAction.CallbackContext context) {
+        isFiring = context.ReadValueAsButton();
+    }
+
     public PlayerBaseState CurrentState { 
         get {
             return currentState;
@@ -74,6 +83,7 @@ public class PlayerStateMachine : MonoBehaviour
     public Vector2 InputLook {get {return inputLook;}}
 
     public bool IsJumping {get {return isJumping;}}
+    public bool IsFiring {get {return isFiring;}}
 
     public Rigidbody Rigidbody {get {return rb;}}
     public CinemachineVirtualCamera MainCamera {get {return mainCamera;}}
@@ -81,5 +91,8 @@ public class PlayerStateMachine : MonoBehaviour
     public float JumpForce {get {return jumpForce;}}
     public float MoveSpeed {get {return moveSpeed;}}
     public float MouseSensitivity {get {return mouseSensitivity;}}
+    public float AirAcceleration {get {return airAcceleration;}}
+    public float MaxAirSpeed {get {return maxAirSpeed;}}
+    public Weapon activeWeapon {get {return GetComponentInChildren<Weapon>();}}
 
 }
