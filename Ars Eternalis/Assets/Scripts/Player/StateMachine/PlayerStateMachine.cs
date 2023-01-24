@@ -31,8 +31,8 @@ public class PlayerStateMachine : MonoBehaviour
     [SerializeField] float maxAirSpeed;
     [SerializeField] private float maxHealth;
     [SerializeField] private HudManager hudManager;
-    CinemachineVirtualCamera mainCamera;
-    Camera cam;
+    CinemachineVirtualCamera virtualCamera;
+    Camera trueCamera;
     TimeMachine timeMachine;
     Rigidbody rb;
 
@@ -44,8 +44,8 @@ public class PlayerStateMachine : MonoBehaviour
 
     void Awake() {
         rb = GetComponent<Rigidbody>();
-        mainCamera = GetComponentInChildren<CinemachineVirtualCamera>();
-        cam = mainCamera.GetComponent<Camera>();
+        virtualCamera = GetComponentInChildren<CinemachineVirtualCamera>();
+        trueCamera = Camera.main;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         health = maxHealth;
@@ -128,8 +128,8 @@ public class PlayerStateMachine : MonoBehaviour
     public float MaxHealth {get {return maxHealth;}}
 
     public Rigidbody Rigidbody {get {return rb;}}
-    public CinemachineVirtualCamera MainCamera {get {return mainCamera;}}
-    public Camera TrueCamera {get {return cam;}}
+    public CinemachineVirtualCamera VirtualCamera {get {return virtualCamera;}}
+    public Camera TrueCamera {get {return trueCamera;}}
     public TimeMachine TimeMachine {get {return timeMachine;}}
 
     public float JumpForce {get {return jumpForce;}}

@@ -9,7 +9,7 @@ public class TimeMachine : MonoBehaviour
 
     void Start()
     {
-        timeTravelPS = GetComponentInChildren<ParticleSystem>().gameObject;
+        timeTravelPS = transform.Find("TimeTravelPS").gameObject;
     }
     public void SendThroughTime(EnemyController enemy)
     {

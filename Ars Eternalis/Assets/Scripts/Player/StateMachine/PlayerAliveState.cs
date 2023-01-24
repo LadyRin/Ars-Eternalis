@@ -10,6 +10,7 @@ public abstract class PlayerAliveState : PlayerBaseState
         Look();
         Move();
         Fire();
+        TrySendThroughTime();
     }
 
     private void Fire()
@@ -22,11 +23,10 @@ public abstract class PlayerAliveState : PlayerBaseState
 
     private void Look()
     {
-        Debug.Log("Looking");
         Vector2 inputLook = context.InputLook;
         Vector2 lookVelocity = inputLook * context.MouseSensitivity;
         Transform transform = context.transform;
-        var mainCamera = context.MainCamera;
+        var mainCamera = context.VirtualCamera;
 
         float horizontalLook = lookVelocity.x * Time.deltaTime;
         float verticalLook = lookVelocity.y * Time.deltaTime;
@@ -48,8 +48,13 @@ public abstract class PlayerAliveState : PlayerBaseState
 
     private void TrySendThroughTime()
     {
+        Debug.Log("Trying to send through time");
+        Debug.Log("Health percentage " + context.Health / context.MaxHealth);
+        Debug.Log("pressing ability 3: " + context.IsAbility3);
+        Debug.Log("ability 3 usable: " + context.IsAbility3Usable);
         if(context.IsAbility3 && context.Health > .6 * context.MaxHealth && context.IsAbility3Usable)
         {
+            Debug.Log("Condition met");
             Camera camera = context.TrueCamera;
 
             Ray ray = camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
@@ -58,6 +63,7 @@ public abstract class PlayerAliveState : PlayerBaseState
             {
                 if(hit.collider.gameObject.tag == "Enemy")
                 {
+                    Debug.Log("Enemy hit");
                     context.Health -= .6f * context.MaxHealth;
                     context.IsAbility3Usable = false;
                     EnemyController enemy = hit.collider.gameObject.GetComponentInParent<EnemyController>();

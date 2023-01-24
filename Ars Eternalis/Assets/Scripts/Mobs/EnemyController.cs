@@ -19,20 +19,20 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        target = PlayerManager.instance.player.transform;
+        //target = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(target.position, transform.position);
-        playerInAttackRange = distance <= attackRange;
-        if (!playerInAttackRange) ChasePlayer();
-        if (playerInAttackRange) AttackPlayer();
+        //float distance = Vector3.Distance(target.position, transform.position);
+        playerInAttackRange = false;
+        //if (!playerInAttackRange) ChasePlayer();
+        //if (playerInAttackRange) AttackPlayer();
     }
 
-    private void ChasePlayer() {
+    /* private void ChasePlayer() {
         agent.SetDestination(target.position);
     }
 
@@ -48,7 +48,7 @@ public class EnemyController : MonoBehaviour
             hasAlreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
-    }
+    } */
 
     private void ResetAttack() {
         hasAlreadyAttacked = false;

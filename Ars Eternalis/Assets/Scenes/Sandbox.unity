@@ -209,7 +209,7 @@ MonoBehaviour:
   jumpForce: 300
   airAcceleration: 10
   maxAirSpeed: 4
-  maxHealth: 0
+  maxHealth: 100
   hudManager: {fileID: 0}
 --- !u!136 &836648118
 CapsuleCollider:
@@ -283,7 +283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836648116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.28, y: 1.134, z: -17.93}
+  m_LocalPosition: {x: 0.42, y: 1.134, z: -4.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4955,7 +4955,7 @@ ParticleSystem:
     ribbonCount: 1
     shadowBias: 0.5
     worldSpace: 0
-    dieWithParticles: 1
+    dieWithParticles: 0
     sizeAffectsWidth: 1
     sizeAffectsLifetime: 0
     inheritParticleColor: 1
@@ -6003,7 +6003,6 @@ MonoBehaviour:
   projectile: {fileID: 0}
   health: 0
   attackRange: 0
-  playerInSightRange: 0
   playerInAttackRange: 1
 --- !u!43 &1603637874
 Mesh:
@@ -6665,7 +6664,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008829535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.28, y: 1.6989999, z: -17.93}
+  m_LocalPosition: {x: 0.42, y: 1.6989999, z: -4.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6770,6 +6769,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Firethrower
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727607288425220577, guid: cc4cb29aa4a20f212ba61ec4f2397e22,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc4cb29aa4a20f212ba61ec4f2397e22, type: 3}
