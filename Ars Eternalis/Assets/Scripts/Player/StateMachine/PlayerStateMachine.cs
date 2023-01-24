@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
+using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
 
 public class PlayerStateMachine : MonoBehaviour
 {
@@ -16,13 +18,14 @@ public class PlayerStateMachine : MonoBehaviour
     Vector2 inputLook;
     bool isJumping;
     bool isFiring;
+    private float health;
     [SerializeField] float mouseSensitivity;
     [SerializeField] float moveSpeed;
     [SerializeField] float jumpForce;
     [SerializeField] float airAcceleration;
     [SerializeField] float maxAirSpeed;
     [SerializeField] private float maxHealth;
-    private float health;
+    [SerializeField] private HudManager hudManager;
     CinemachineVirtualCamera mainCamera;
     Rigidbody rb;
 
@@ -38,6 +41,8 @@ public class PlayerStateMachine : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         health = maxHealth;
+        hudManager.SetMaxHealth(maxHealth);
+        hudManager.SetHealth(health);
         
         InitStates();
     
