@@ -1758,7 +1758,7 @@ GameObject:
   - component: {fileID: 8372884762783851249}
   - component: {fileID: 407295003526650373}
   m_Layer: 0
-  m_Name: TowerStairs 1x1
+  m_Name: TowerStairs 1x1 Copy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
