@@ -9,7 +9,7 @@ public class WeaponData : ScriptableObject
     
     [Header("General")]
     public new string name;
-    public int damage;
+    public float damage;
     public float useRate;
 
 }

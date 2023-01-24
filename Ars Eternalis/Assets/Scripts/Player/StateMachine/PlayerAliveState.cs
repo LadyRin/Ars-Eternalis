@@ -7,8 +7,8 @@ public abstract class PlayerAliveState : PlayerBaseState
     public PlayerAliveState(PlayerStateMachine currentContext) : base(currentContext) { }
     public override void UpdateState()
     {
-        Move();
         Look();
+        Move();
         Fire();
     }
 
@@ -16,20 +16,8 @@ public abstract class PlayerAliveState : PlayerBaseState
     {
         if (context.IsFiring)
         {
-            context.activeWeapon.TryUse();
+            //context.activeWeapon.TryUse();
         }
-    }
-
-    private void Move()
-    {
-        Vector2 inputMove = context.InputMove;
-        float moveSpeed = context.MoveSpeed;
-
-        Vector3 moveVelocity = new Vector3(inputMove.x, 0, inputMove.y) * moveSpeed;
-        moveVelocity = context.transform.TransformDirection(moveVelocity);
-        moveVelocity.y = context.Rigidbody.velocity.y;
-
-        context.Rigidbody.velocity = moveVelocity;
     }
 
     private void Look()
@@ -55,4 +43,5 @@ public abstract class PlayerAliveState : PlayerBaseState
         mainCamera.transform.localEulerAngles = new Vector3(cameraRotation, 0, 0);
     }
 
+    protected abstract void Move();
 }

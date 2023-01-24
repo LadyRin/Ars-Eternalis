@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1b54bf42db389d1e85840da4b0bab2e, type: 3}
-  m_Name: Revolver
+  m_Name: Firethrower
   m_EditorClassIdentifier: 
-  name: Revolver
-  damage: 2
-  useRate: 0.8
+  name: Firethrower
+  damage: 0.5
+  useRate: 0
