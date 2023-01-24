@@ -22,8 +22,8 @@ public class PlayerStateMachine : MonoBehaviour
     bool isAbility2;
     bool isAbility3;
     bool isAbility4;
+    private bool isFreezeReloading;
     private float health;
-    private float lastFreezing = 0;
     private bool ability3Usable = true;
     [SerializeField] float mouseSensitivity;
     [SerializeField] float moveSpeed;
@@ -34,7 +34,6 @@ public class PlayerStateMachine : MonoBehaviour
     [SerializeField] private HudManager hudManager;
     CinemachineVirtualCamera virtualCamera;
     Camera trueCamera;
-    [SerializeField] private float freezingDelay;
     TimeMachine timeMachine;
     Rigidbody rb;
 
@@ -54,6 +53,7 @@ public class PlayerStateMachine : MonoBehaviour
         hudManager?.SetMaxHealth(maxHealth);
         hudManager?.SetHealth(health);
         timeMachine = FindObjectOfType<TimeMachine>();
+        isFreezeReloading = false;
         
         InitStates();
     
@@ -107,12 +107,28 @@ public class PlayerStateMachine : MonoBehaviour
         isAbility4 = context.ReadValueAsButton();
     }
 
+    public new void StartCoroutine(IEnumerator enumerator)
+    {
+        
+        base.StartCoroutine(enumerator);
+    }
+
     public PlayerBaseState CurrentState { 
         get {
             return currentState;
         } 
         set {
             currentState = value;
+        }
+    }
+
+    public bool IsFreezeReloading
+    {
+        get {
+            return isFreezeReloading;
+        }
+        set {
+            isFreezeReloading = value;
         }
     }
     
@@ -128,13 +144,6 @@ public class PlayerStateMachine : MonoBehaviour
     public bool IsAbility4 {get {return isAbility4;}}
     public float Health {get {return health;} set {health = value;}}
     public float MaxHealth {get {return maxHealth;}}
-
-    public float FreezingDelay {get { return FreezingDelay; }}
-    public float LastFreezing
-    {
-        get { return LastFreezing; }
-        set => LastFreezing = value;
-    }
     
     public Rigidbody Rigidbody {get {return rb;}}
     public CinemachineVirtualCamera VirtualCamera {get {return virtualCamera;}}

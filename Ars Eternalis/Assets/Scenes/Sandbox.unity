@@ -211,7 +211,6 @@ MonoBehaviour:
   maxAirSpeed: 4
   maxHealth: 100
   hudManager: {fileID: 0}
-  freezingDelay: 0
 --- !u!136 &836648118
 CapsuleCollider:
   m_ObjectHideFlags: 0

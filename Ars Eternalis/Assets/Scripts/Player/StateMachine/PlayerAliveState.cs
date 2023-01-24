@@ -25,12 +25,25 @@ public abstract class PlayerAliveState : PlayerBaseState
 
     private void FreezeAgility()
     {
+        if (!context.IsAbility1 || context.IsFreezeReloading) return;
         
-        Debug.Log("btnPressed : " + context.IsAbility1 + " delay ok? : " + (context.FreezingDelay > DateTime.Now.Second));
-        if (!context.IsAbility1 || context.LastFreezing + context.FreezingDelay > DateTime.Now.Second) return;
-        context.LastFreezing = DateTime.Now.Second;
-
-        Debug.Log(context.LastFreezing);
+        Ray ray = context.TrueCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+        RaycastHit hit;
+        Vector3 endPoint = new Vector3(0, 0, 0);
+        if (Physics.Raycast(ray, out hit, 100f))
+        {
+            IFreezable freezable = hit.collider.GetComponent<IFreezable>();
+            if (freezable != null)
+            {
+                freezable.Freeze();
+            }
+            //endPoint = hit.point;
+        } else
+        {
+            //endPoint = ray.GetPoint(100f);
+        }
+        
+        context.StartCoroutine(FreezingDelay());
     }
 
     private void Look()
@@ -85,7 +98,12 @@ public abstract class PlayerAliveState : PlayerBaseState
         }
     }
 
-
+    private IEnumerator FreezingDelay()
+    {
+        context.IsFreezeReloading = true;
+        yield return new WaitForSeconds(10f);
+        context.IsFreezeReloading = false;
+    }
 
 
 }
