@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,23 +11,34 @@ public abstract class PlayerAliveState : PlayerBaseState
         Look();
         Move();
         Fire();
+        TrySendThroughTime();
+        FreezeAgility();
     }
 
     private void Fire()
     {
         if (context.IsFiring)
         {
-            //context.activeWeapon.TryUse();
+            context.activeWeapon?.TryUse();
         }
+    }
+
+    private void FreezeAgility()
+    {
+        
+        Debug.Log("btnPressed : " + context.IsAbility1 + " delay ok? : " + (context.FreezingDelay > DateTime.Now.Second));
+        if (!context.IsAbility1 || context.LastFreezing + context.FreezingDelay > DateTime.Now.Second) return;
+        context.LastFreezing = DateTime.Now.Second;
+
+        Debug.Log(context.LastFreezing);
     }
 
     private void Look()
     {
-        Debug.Log("Looking");
         Vector2 inputLook = context.InputLook;
         Vector2 lookVelocity = inputLook * context.MouseSensitivity;
         Transform transform = context.transform;
-        var mainCamera = context.MainCamera;
+        var mainCamera = context.VirtualCamera;
 
         float horizontalLook = lookVelocity.x * Time.deltaTime;
         float verticalLook = lookVelocity.y * Time.deltaTime;
@@ -46,5 +58,34 @@ public abstract class PlayerAliveState : PlayerBaseState
 
     protected abstract void Move();
 
-    
+    private void TrySendThroughTime()
+    {
+        Debug.Log("Trying to send through time");
+        Debug.Log("Health percentage " + context.Health / context.MaxHealth);
+        Debug.Log("pressing ability 3: " + context.IsAbility3);
+        Debug.Log("ability 3 usable: " + context.IsAbility3Usable);
+        if(context.IsAbility3 && context.Health > .6 * context.MaxHealth && context.IsAbility3Usable)
+        {
+            Debug.Log("Condition met");
+            Camera camera = context.TrueCamera;
+
+            Ray ray = camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+                if(hit.collider.gameObject.tag == "Enemy")
+                {
+                    Debug.Log("Enemy hit");
+                    context.Health -= .6f * context.MaxHealth;
+                    context.IsAbility3Usable = false;
+                    EnemyController enemy = hit.collider.gameObject.GetComponentInParent<EnemyController>();
+                    context.TimeMachine.SendThroughTime(enemy);
+                }
+            }
+        }
+    }
+
+
+
+
 }
