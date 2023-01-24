@@ -22,6 +22,7 @@ public abstract class PlayerAliveState : PlayerBaseState
 
     private void Look()
     {
+        Debug.Log("Looking");
         Vector2 inputLook = context.InputLook;
         Vector2 lookVelocity = inputLook * context.MouseSensitivity;
         Transform transform = context.transform;
@@ -44,4 +45,6 @@ public abstract class PlayerAliveState : PlayerBaseState
     }
 
     protected abstract void Move();
+
+    
 }
