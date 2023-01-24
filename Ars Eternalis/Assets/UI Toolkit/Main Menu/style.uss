@@ -22,22 +22,22 @@
 }
 
 .unity-button{
-    padding-top: 5px;
-    background-image: url('../../Fantasy Wooden GUI  Free/normal_ui_set A/TextBTN_Big.png');
-    color: white;
-    
-    width: 169px;
-    height: 56px;
-    margin: 20px 0;
-    
-    font-size: 20px;
+    margin: 5% 0;
     
     border-color: transparent;
     background-color: transparent;
 }
 
-.unity-button:active{
-    padding-top: 25px;
-    background-image: url('../../Fantasy Wooden GUI  Free/normal_ui_set A/TextBTN_Big_Pressed.png');
-    color: darkgray;
+#play{
+    background-image: url('../../Fantasy Wooden GUI  Free/btns/jouer.png');
+}
+#play:active{
+    background-image: url('../../Fantasy Wooden GUI  Free/btns/jouerHover.png');
+}
+
+#quit{
+    background-image: url('../../Fantasy Wooden GUI  Free/btns/quitter.png');
+}
+#quit:active{
+    background-image: url('../../Fantasy Wooden GUI  Free/btns/quitterHover.png');
 }
