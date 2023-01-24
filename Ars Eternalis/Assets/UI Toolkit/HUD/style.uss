@@ -1,0 +1,44 @@
+#root{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#contextual-hud{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    padding-top: 10%;
+}
+
+#cross{
+    color: white;
+    font-size: 200%;
+}
+
+#player-hud{
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+}
+
+#health-bar{
+    width: 100%;
+}
+
+#health-bar .unity-progress-bar__progress{
+    background-color: aquamarine;
+}
+
+#left-side{
+    width: 30%;
+}
+
+#left-side .unity-label{
+    color: white;
+}

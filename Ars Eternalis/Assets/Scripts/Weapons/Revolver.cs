@@ -20,10 +20,7 @@ public class Revolver : Weapon
     protected override void Use()
     {
         Camera mainCamera = Camera.main;
-        Vector3 targetPoint = mainCamera.ScreenToWorldPoint(new Vector3(0.5f, 0.5f, mainCamera.transform.position.y - transform.position.y));
-        animator.SetTrigger("Shoot");
-
-        Ray ray = new Ray(firePoint.position, targetPoint - firePoint.position);
+        Ray ray = mainCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
         RaycastHit hit;
         Vector3 endPoint = new Vector3(0, 0, 0);
         if (Physics.Raycast(ray, out hit, 100f))
@@ -39,12 +36,14 @@ public class Revolver : Weapon
             endPoint = ray.GetPoint(100f);
         }
         DrawGunTrail(endPoint);
+        timeSinceLastUse = 0f;
     }
 
     private void DrawGunTrail(Vector3 hitPoint)
     {
         GameObject trail = Instantiate(new GameObject(), firePoint.position, Quaternion.identity);
         LineRenderer lineRenderer = trail.AddComponent<LineRenderer>();
+        lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
         lineRenderer.startWidth = 0.1f;
         lineRenderer.endWidth = 0.1f;
         lineRenderer.SetPosition(0, firePoint.position);
