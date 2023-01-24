@@ -23,6 +23,7 @@ public class PlayerStateMachine : MonoBehaviour
     bool isAbility3;
     bool isAbility4;
     private float health;
+    private float lastFreezing = 0;
     [SerializeField] float mouseSensitivity;
     [SerializeField] float moveSpeed;
     [SerializeField] float jumpForce;
@@ -30,6 +31,7 @@ public class PlayerStateMachine : MonoBehaviour
     [SerializeField] float maxAirSpeed;
     [SerializeField] private float maxHealth;
     [SerializeField] private HudManager hudManager;
+    [SerializeField] private float freezingDelay;
     CinemachineVirtualCamera mainCamera;
     Rigidbody rb;
 
@@ -139,9 +141,17 @@ public class PlayerStateMachine : MonoBehaviour
 
     public Vector2 InputMove { get { return inputMove; } }
     public Vector2 InputLook { get { return inputLook; } }
-
-    public bool IsJumping { get { return isJumping; } }
-    public bool IsFiring { get { return isFiring; } }
+    
+    public bool IsJumping {get {return isJumping;}}
+    public bool IsFiring {get {return isFiring;}}
+    
+    public bool IsAbility1 {get { return isAbility1; }}
+    public float FreezingDelay {get { return FreezingDelay; }}
+    public float LastFreezing
+    {
+        get { return LastFreezing; }
+        set => LastFreezing = value;
+    }
 
     public Rigidbody Rigidbody { get { return rb; } }
     public CinemachineVirtualCamera MainCamera { get { return mainCamera; } }

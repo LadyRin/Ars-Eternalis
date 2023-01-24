@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18029127, g: 0.22572401, b: 0.3069303, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -165,6 +165,7 @@ MonoBehaviour:
   maxAirSpeed: 4
   maxHealth: 0
   hudManager: {fileID: 0}
+  freezingDelay: 0
 --- !u!136 &836648118
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -376,7 +377,19 @@ MonoBehaviour:
     m_ActionId: 4062fc72-1988-4cd2-824a-045824ca891b
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 836648117}
+        m_TargetAssemblyTypeName: PlayerStateMachine, Assembly-CSharp
+        m_MethodName: OnAbility1
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 476914c3-5673-474d-93c9-9de0074f8ada
     m_ActionName: Player/Ability1[/Keyboard/r]
   - m_PersistentCalls:
@@ -1670,6 +1683,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Firethrower
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727607288425220577, guid: cc4cb29aa4a20f212ba61ec4f2397e22,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc4cb29aa4a20f212ba61ec4f2397e22, type: 3}
