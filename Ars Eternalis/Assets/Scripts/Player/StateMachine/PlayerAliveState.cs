@@ -16,7 +16,7 @@ public abstract class PlayerAliveState : PlayerBaseState
     {
         if (context.IsFiring)
         {
-            //context.activeWeapon.TryUse();
+            context.activeWeapon?.TryUse();
         }
     }
 
@@ -46,5 +46,28 @@ public abstract class PlayerAliveState : PlayerBaseState
 
     protected abstract void Move();
 
-    
+    private void TrySendThroughTime()
+    {
+        if(context.IsAbility3 && context.Health > .6 * context.MaxHealth && context.IsAbility3Usable)
+        {
+            Camera camera = context.TrueCamera;
+
+            Ray ray = camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+                if(hit.collider.gameObject.tag == "Enemy")
+                {
+                    context.Health -= .6f * context.MaxHealth;
+                    context.IsAbility3Usable = false;
+                    EnemyController enemy = hit.collider.gameObject.GetComponentInParent<EnemyController>();
+                    context.TimeMachine.SendThroughTime(enemy);
+                }
+            }
+        }
+    }
+
+
+
+
 }
