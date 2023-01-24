@@ -14,7 +14,6 @@ public class EnemyController : MonoBehaviour
 
     //States
     public float attackRange;
-    public bool playerInSightRange;
     public bool playerInAttackRange = true; 
 
     // Start is called before the first frame update
@@ -35,19 +34,20 @@ public class EnemyController : MonoBehaviour
 
     private void ChasePlayer() {
         agent.SetDestination(target.position);
+    }
+
+    private void AttackPlayer() {
+        agent.SetDestination(transform.position);
         transform.LookAt(target);
         if (!hasAlreadyAttacked) {
+            // Destroy(rb);
             Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
-            rb.AddForce(transform.up * 32f, ForceMode.Impulse);
+            rb.AddForce(transform.forward * 40f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 20f, ForceMode.Impulse);
 
             hasAlreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
-    }
-
-    private void AttackPlayer() {
-        // agent.Stop()
     }
 
     private void ResetAttack() {
@@ -56,11 +56,11 @@ public class EnemyController : MonoBehaviour
 
     public void TakeDamage(int damage) {
         health -= damage;
-        if (health <= 0) DestroyEnemy();
+        if (health <= 0) Invoke(nameof(DestroyEnemy),0.5f);
     }
 
     private void DestroyEnemy() {
-        
+        Destroy(gameObject);
     }
 
     void OnDrawGizmosSelected() {
