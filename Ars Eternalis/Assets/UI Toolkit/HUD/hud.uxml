@@ -1,0 +1,14 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/HUD/style.uss?fileID=7433441132597879392&amp;guid=7ce142a0f99bd4a7ab318f67813731d0&amp;type=3#style" />
+    <ui:VisualElement name="root">
+        <ui:VisualElement name="contextual-hud">
+            <ui:Label text="+" display-tooltip-when-elided="true" name="cross" />
+        </ui:VisualElement>
+        <ui:VisualElement name="player-hud">
+            <ui:VisualElement name="left-side">
+                <ui:Label text="Temps/Vie" display-tooltip-when-elided="true" style="-unity-font-definition: url(&apos;project://database/Assets/UI%20Toolkit/fonts/BMYEONSUNG_ttf%20SDF.asset?fileID=11400000&amp;guid=edf608a7da7bf47278dec22871159892&amp;type=2#BMYEONSUNG_ttf SDF&apos;); font-size: 20px;" />
+                <ui:ProgressBar value="22" title=" " name="health-bar" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

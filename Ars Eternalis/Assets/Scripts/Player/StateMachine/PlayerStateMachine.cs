@@ -21,6 +21,8 @@ public class PlayerStateMachine : MonoBehaviour
     [SerializeField] float jumpForce;
     [SerializeField] float airAcceleration;
     [SerializeField] float maxAirSpeed;
+    [SerializeField] private float maxHealth;
+    private float health;
     CinemachineVirtualCamera mainCamera;
     Rigidbody rb;
 
@@ -35,6 +37,8 @@ public class PlayerStateMachine : MonoBehaviour
         mainCamera = GetComponentInChildren<CinemachineVirtualCamera>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        health = maxHealth;
+        
         InitStates();
     
         currentState = groundedState;
