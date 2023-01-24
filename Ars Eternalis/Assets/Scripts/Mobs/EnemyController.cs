@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyController : MonoBehaviour
+public abstract class EnemyController : MonoBehaviour
 {
     Transform target;
     NavMeshAgent agent;
@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour
 
     //States
     public float attackRange;
-    public bool playerInAttackRange = true; 
+    public bool playerInAttackRange = true;
 
     // Start is called before the first frame update
     void Start()
@@ -50,20 +50,24 @@ public class EnemyController : MonoBehaviour
         }
     } */
 
-    private void ResetAttack() {
+    private void ResetAttack()
+    {
         hasAlreadyAttacked = false;
     }
 
-    public void TakeDamage(int damage) {
+    public void TakeDamage(int damage)
+    {
         health -= damage;
-        if (health <= 0) Invoke(nameof(DestroyEnemy),0.5f);
+        if (health <= 0) Invoke(nameof(DestroyEnemy), 0.5f);
     }
 
-    private void DestroyEnemy() {
+    private void DestroyEnemy()
+    {
         Destroy(gameObject);
     }
 
-    void OnDrawGizmosSelected() {
+    void OnDrawGizmosSelected()
+    {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }

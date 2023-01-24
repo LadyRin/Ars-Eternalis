@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18029127, g: 0.22572401, b: 0.3069303, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 445002611}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -123,6 +123,68 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!850595691 &445002611
+LightingSettings:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 4
+  m_GIWorkflowMode: 1
+  m_EnableBakedLightmaps: 1
+  m_EnableRealtimeLightmaps: 0
+  m_RealtimeEnvironmentLighting: 1
+  m_BounceScale: 1
+  m_AlbedoBoost: 1
+  m_IndirectOutputScale: 1
+  m_UsingShadowmask: 1
+  m_BakeBackend: 1
+  m_LightmapMaxSize: 1024
+  m_BakeResolution: 40
+  m_Padding: 2
+  m_LightmapCompression: 3
+  m_AO: 0
+  m_AOMaxDistance: 1
+  m_CompAOExponent: 1
+  m_CompAOExponentDirect: 0
+  m_ExtractAO: 0
+  m_MixedBakeMode: 2
+  m_LightmapsBakeMode: 1
+  m_FilterMode: 1
+  m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
+  m_ExportTrainingData: 0
+  m_TrainingDataDestination: TrainingData
+  m_RealtimeResolution: 2
+  m_ForceWhiteAlbedo: 0
+  m_ForceUpdates: 0
+  m_FinalGather: 0
+  m_FinalGatherRayCount: 256
+  m_FinalGatherFiltering: 1
+  m_PVRCulling: 1
+  m_PVRSampling: 1
+  m_PVRDirectSampleCount: 32
+  m_PVRSampleCount: 512
+  m_PVREnvironmentSampleCount: 256
+  m_PVREnvironmentReferencePointCount: 2048
+  m_LightProbeSampleCountMultiplier: 4
+  m_PVRBounces: 2
+  m_PVRMinBounces: 1
+  m_PVREnvironmentMIS: 1
+  m_PVRFilteringMode: 1
+  m_PVRDenoiserTypeDirect: 1
+  m_PVRDenoiserTypeIndirect: 1
+  m_PVRDenoiserTypeAO: 1
+  m_PVRFilterTypeDirect: 0
+  m_PVRFilterTypeIndirect: 0
+  m_PVRFilterTypeAO: 0
+  m_PVRFilteringGaussRadiusDirect: 1
+  m_PVRFilteringGaussRadiusIndirect: 5
+  m_PVRFilteringGaussRadiusAO: 2
+  m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+  m_PVRFilteringAtrousPositionSigmaIndirect: 2
+  m_PVRFilteringAtrousPositionSigmaAO: 1
+  m_PVRTiledBaking: 0
 --- !u!1 &599264780
 GameObject:
   m_ObjectHideFlags: 0
@@ -6000,7 +6062,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca5606ac6589f3043b48283ffc312aa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  agent: {fileID: 0}
   timeBetweenAttacks: 0
+  hasAlreadyAttacked: 0
   projectile: {fileID: 0}
   health: 0
   attackRange: 0
@@ -6011,7 +6076,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28884
+  m_Name: pb_Mesh52634
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6020,10 +6085,10 @@ Mesh:
     topology: 0
     baseVertex: 0
     firstVertex: 0
-    vertexCount: 16
+    vertexCount: 9
     localAABB:
-      m_Center: {x: 37.5, y: 0.0001, z: 37.5}
-      m_Extent: {x: 37.5, y: 0, z: 37.5}
+      m_Center: {x: 37.45, y: 0.0001, z: 37.5}
+      m_Extent: {x: 37.55, y: 0, z: 37.5}
   m_Shapes:
     vertices: []
     shapes: []
@@ -6040,10 +6105,10 @@ Mesh:
   m_KeepVertices: 1
   m_KeepIndices: 1
   m_IndexFormat: 0
-  m_IndexBuffer: 000001000200010003000200040005000600050007000600080009000a0009000b000a000c000d000e000d000f000e00
+  m_IndexBuffer: 000001000200010003000200010004000300040005000300020003000600030007000600030005000700050008000700
   m_VertexData:
     serializedVersion: 3
-    m_VertexCount: 16
+    m_VertexCount: 9
     m_Channels:
     - stream: 0
       offset: 0
@@ -6101,8 +6166,8 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
-    m_DataSize: 768
-    _typelessdata: 0000000017b7d13800000000000000000000803f000000000000803f0000000000000000000080bf00000000000000000000000017b7d13800001642000000000000803f000000000000803f0000000000000000000080bf00000000000016420000164217b7d13800000000000000000000803f000000000000803f0000000000000000000080bf00001642000000000000164217b7d13800001642000000000000803f000000000000803f0000000000000000000080bf00001642000016420000000017b7d13800001642000000000000803f000000000000803f0000000000000000000080bf00000000000016420000000017b7d13800009642000000000000803f000000000000803f0000000000000000000080bf00000000000096420000164217b7d13800001642000000000000803f000000000000803f0000000000000000000080bf00001642000016420000164217b7d13800009642000000000000803f000000000000803f0000000000000000000080bf00001642000096420000164217b7d13800000000000000000000803f000000000000803f0000000000000000000080bf00001642000000000000164217b7d13800001642000000000000803f000000000000803f0000000000000000000080bf00001642000016420000964217b7d13800000000000000000000803f000000000000803f0000000000000000000080bf00009642000000000000964217b7d13800001642000000000000803f000000000000803f0000000000000000000080bf00009642000016420000164217b7d13800001642000000000000803f000000000000803f0000000000000000000080bf00001642000016420000164217b7d13800009642000000000000803f000000000000803f0000000000000000000080bf00001642000096420000964217b7d13800001642000000000000803f000000000000803f0000000000000000000080bf00009642000016420000964217b7d13800009642000000000000803f000000000000803f0000000000000000000080bf0000964200009642
+    m_DataSize: 432
+    _typelessdata: 00ccccbd17b7d13800000000000000000000803f000000000000803f0000000000000000000080bf00ccccbd0000000000ccccbd17b7d13800001642000000000000803f000000000000803f0000000000000000000080bf00ccccbd000016420000164217b7d13800000000000000000000803f000000000000803f0000000000000000000080bf00001642000000000000164217b7d13800001642000000000000803f000000000000803f0000000000000000000080bf00001642000016420000000017b7d13800009642000000000000803f000000000000803f0000000000000000000080bf00000000000096420000164217b7d13800009642000000000000803f000000000000803f0000000000000000000080bf00001642000096420000964217b7d13800000000000000000000803f000000000000803f0000000000000000000080bf00009642000000000000964217b7d13800001642000000000000803f000000000000803f0000000000000000000080bf00009642000016420000964217b7d13800009642000000000000803f000000000000803f0000000000000000000080bf0000964200009642
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -6156,8 +6221,8 @@ Mesh:
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
-    m_Center: {x: 37.5, y: 0.0001, z: 37.5}
-    m_Extent: {x: 37.5, y: 0, z: 37.5}
+    m_Center: {x: 37.45, y: 0.0001, z: 37.5}
+    m_Extent: {x: 37.55, y: 0, z: 37.5}
   m_MeshUsageFlags: 0
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
@@ -6378,11 +6443,11 @@ MonoBehaviour:
   - m_Vertices: 0f000000
   m_SharedTextures: []
   m_Positions:
-  - {x: 0, y: 0.0001, z: 0}
-  - {x: 0, y: 0.0001, z: 37.5}
+  - {x: -0.099998474, y: 0.0001, z: 0}
+  - {x: -0.099998474, y: 0.0001, z: 37.5}
   - {x: 37.5, y: 0.0001, z: 0}
   - {x: 37.5, y: 0.0001, z: 37.5}
-  - {x: 0, y: 0.0001, z: 37.5}
+  - {x: -0.099998474, y: 0.0001, z: 37.5}
   - {x: 0, y: 0.0001, z: 75}
   - {x: 37.5, y: 0.0001, z: 37.5}
   - {x: 37.5, y: 0.0001, z: 75}
@@ -6395,11 +6460,11 @@ MonoBehaviour:
   - {x: 75, y: 0.0001, z: 37.5}
   - {x: 75, y: 0.0001, z: 75}
   m_Textures0:
-  - {x: 0, y: 0}
-  - {x: 0, y: 37.5}
+  - {x: -0.099998474, y: 0}
+  - {x: -0.099998474, y: 37.5}
   - {x: 37.5, y: 0}
   - {x: 37.5, y: 37.5}
-  - {x: 0, y: 37.5}
+  - {x: -0.099998474, y: 37.5}
   - {x: 0, y: 75}
   - {x: 37.5, y: 37.5}
   - {x: 37.5, y: 75}
@@ -6439,7 +6504,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 1603637874}
-  m_VersionIndex: 931
+  m_VersionIndex: 1227
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
