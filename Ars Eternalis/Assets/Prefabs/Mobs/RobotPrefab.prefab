@@ -122,7 +122,7 @@ MonoBehaviour:
     type: 3}
   health: 100
   attackRange: 10
-  playerInAttackRange: 1
+  playerInAttackRange: 0
 --- !u!195 &898164593
 NavMeshAgent:
   m_ObjectHideFlags: 0
