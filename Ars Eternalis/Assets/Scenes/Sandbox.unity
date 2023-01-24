@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18029127, g: 0.22572401, b: 0.3069303, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -211,6 +211,7 @@ MonoBehaviour:
   maxAirSpeed: 4
   maxHealth: 100
   hudManager: {fileID: 0}
+  freezingDelay: 0
 --- !u!136 &836648118
 CapsuleCollider:
   m_ObjectHideFlags: 0

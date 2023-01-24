@@ -23,6 +23,7 @@ public class PlayerStateMachine : MonoBehaviour
     bool isAbility3;
     bool isAbility4;
     private float health;
+    private float lastFreezing = 0;
     private bool ability3Usable = true;
     [SerializeField] float mouseSensitivity;
     [SerializeField] float moveSpeed;
@@ -33,6 +34,7 @@ public class PlayerStateMachine : MonoBehaviour
     [SerializeField] private HudManager hudManager;
     CinemachineVirtualCamera virtualCamera;
     Camera trueCamera;
+    [SerializeField] private float freezingDelay;
     TimeMachine timeMachine;
     Rigidbody rb;
 
@@ -113,7 +115,7 @@ public class PlayerStateMachine : MonoBehaviour
             currentState = value;
         }
     }
-
+    
     public Vector2 InputMove {get {return inputMove;}}
     public Vector2 InputLook {get {return inputLook;}}
 
@@ -127,6 +129,13 @@ public class PlayerStateMachine : MonoBehaviour
     public float Health {get {return health;} set {health = value;}}
     public float MaxHealth {get {return maxHealth;}}
 
+    public float FreezingDelay {get { return FreezingDelay; }}
+    public float LastFreezing
+    {
+        get { return LastFreezing; }
+        set => LastFreezing = value;
+    }
+    
     public Rigidbody Rigidbody {get {return rb;}}
     public CinemachineVirtualCamera VirtualCamera {get {return virtualCamera;}}
     public Camera TrueCamera {get {return trueCamera;}}

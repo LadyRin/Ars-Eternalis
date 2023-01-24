@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public abstract class PlayerAliveState : PlayerBaseState
         Move();
         Fire();
         TrySendThroughTime();
+        FreezeAgility();
     }
 
     private void Fire()
@@ -19,6 +21,16 @@ public abstract class PlayerAliveState : PlayerBaseState
         {
             context.activeWeapon?.TryUse();
         }
+    }
+
+    private void FreezeAgility()
+    {
+        
+        Debug.Log("btnPressed : " + context.IsAbility1 + " delay ok? : " + (context.FreezingDelay > DateTime.Now.Second));
+        if (!context.IsAbility1 || context.LastFreezing + context.FreezingDelay > DateTime.Now.Second) return;
+        context.LastFreezing = DateTime.Now.Second;
+
+        Debug.Log(context.LastFreezing);
     }
 
     private void Look()
