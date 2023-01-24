@@ -29,7 +29,7 @@ public class PlayerGroundedState : PlayerAliveState
 
     public override void EnterState()
     {
-        //
+        Debug.Log("Switching to Grounded State");
     }
 
     public override void ExitState()

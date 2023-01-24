@@ -15,7 +15,7 @@ public class ZombieController : MonoBehaviour
     {
         animator=GetComponent<Animator>();
         animator.SetBool("isWalking",true);
-        player = GameObject.Find("player");
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
