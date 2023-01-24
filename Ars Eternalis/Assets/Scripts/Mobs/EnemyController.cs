@@ -5,6 +5,7 @@ public class EnemyController : MonoBehaviour
 {
     Transform target;
     NavMeshAgent agent;
+    Animator animator;
 
     // Attacking
     public float timeBetweenAttacks;
@@ -19,6 +20,7 @@ public class EnemyController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         target = PlayerManager.instance.player.transform;
         agent = GetComponent<NavMeshAgent>();
     }
@@ -34,9 +36,14 @@ public class EnemyController : MonoBehaviour
 
     private void ChasePlayer() {
         agent.SetDestination(target.position);
+        animator.SetBool("isWalking",true);
     }
 
     private void AttackPlayer() {
+        animator.SetBool("isWalking",false);
+        animator.SetBool("isPunching",true);
+
+
         agent.SetDestination(transform.position);
         transform.LookAt(target);
         if (!hasAlreadyAttacked) {
