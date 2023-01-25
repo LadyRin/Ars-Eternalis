@@ -15,7 +15,6 @@ public class EnemyMeleeAttackState : EnemyBaseState
     }
     public override void UpdateState() { }
     public override void ExitState() { }
-    public override void CheckSwitchStates() { }
 
     private IEnumerator Attack()
     {
@@ -25,6 +24,6 @@ public class EnemyMeleeAttackState : EnemyBaseState
         yield return new WaitForSeconds(context.AttackDuration);
         context.MeleeHitbox.enabled = false;
         yield return new WaitForSeconds(context.AttackDelayEnd);
-        SwitchState(context.trackingState);
+        SwitchState(context.decisionState);
     }
 }
