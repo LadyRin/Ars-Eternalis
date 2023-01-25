@@ -6473,6 +6473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8372884762783851249}
   - component: {fileID: 407295003526650373}
+  - component: {fileID: -7185246552260355998}
   m_Layer: 0
   m_Name: Crossroads1x2 3Exit
   m_TagString: Untagged
@@ -6523,6 +6524,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 30, y: 1, z: 45}
   m_Center: {x: 0, y: 0, z: 22.5}
+--- !u!114 &-7185246552260355998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8487825960891396661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba8a23fe19fffa66183e782c5db08a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8573310668753583523
 GameObject:
   m_ObjectHideFlags: 0
