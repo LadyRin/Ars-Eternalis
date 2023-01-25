@@ -26,4 +26,14 @@ public class EnemyMeleeAttackState : EnemyBaseState
         yield return new WaitForSeconds(context.AttackDelayEnd);
         SwitchState(context.decisionState);
     }
+
+    public override void CheckSwitchStates()
+    {
+        if(context.Health <= 0)
+        {
+            SwitchState(context.deadState);
+        }
+    }
+
+    
 }

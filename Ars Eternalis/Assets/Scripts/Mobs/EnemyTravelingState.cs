@@ -14,6 +14,7 @@ public class EnemyTravelingState : EnemyBaseState
     {
         animator = context.Animator;
         agent = context.Agent;
+        agent.isStopped = false;
         animator.SetBool("IsMoving", true);
 
         if (context.IsMelee)
@@ -31,17 +32,26 @@ public class EnemyTravelingState : EnemyBaseState
         }
         agent.SetDestination(destination);
     }
-    public override void UpdateState() { }
+    public override void UpdateState()
+    {
+        destination = context.Player.position;
+        agent.SetDestination(destination);
+    }
     public override void ExitState()
     {
         animator.SetBool("IsMoving", false);
+        agent.isStopped = true;
     }
-    public new void CheckSwitchStates()
+    public override void CheckSwitchStates()
     {
-        base.CheckSwitchStates();
-        if (Vector3.Distance(context.transform.position, destination) < 1)
+        if(context.Health <= 0)
         {
-            SwitchState(context.decisionState);
+            SwitchState(context.deadState);
+        }
+        
+        if (Vector3.Distance(context.transform.position, destination) <= context.AttackRange)
+        {
+            SwitchState(context.meleeAttackState);
         }
     }
 }

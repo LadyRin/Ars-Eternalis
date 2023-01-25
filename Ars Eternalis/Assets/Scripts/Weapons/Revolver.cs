@@ -25,7 +25,7 @@ public class Revolver : Weapon
         Vector3 endPoint = new Vector3(0, 0, 0);
         if (Physics.Raycast(ray, out hit, 100f))
         {
-            IShootable shootable = hit.collider.GetComponent<IShootable>();
+            IShootable shootable = hit.collider.GetComponentInParent<IShootable>();
             if (shootable != null)
             {
                 shootable.GetShot(hit.point, hit.collider, weaponData.damage);

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class EnemyBaseState: MonoBehaviour
+public abstract class EnemyBaseState
 {
     protected EnemyStateMachine context;
 
@@ -13,12 +13,7 @@ public abstract class EnemyBaseState: MonoBehaviour
 
     public abstract void ExitState();
 
-    public void CheckSwitchStates() {
-        if(context.Health <= 0)
-        {
-            SwitchState(context.deadState);
-        }
-    }
+    public abstract void CheckSwitchStates();
     
     protected void SwitchState(EnemyBaseState newState){
         // Exit current state 

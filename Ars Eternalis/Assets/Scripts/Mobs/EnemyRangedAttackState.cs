@@ -17,9 +17,17 @@ public class EnemyRangedAttackState : EnemyBaseState
 
     private IEnumerator Fire() {
         yield return new WaitForSeconds(context.AttackDelayStart);
-        projectile = Instantiate(context.Projectile, context.transform.position, context.transform.rotation);
+        projectile = Object.Instantiate(context.Projectile, context.transform.position, context.transform.rotation);
         projectile.GetComponent<Projectile>().SetTarget(context.Player);
         yield return new WaitForSeconds(context.AttackDelayEnd);
         SwitchState(context.decisionState);
+    }
+
+    public override void CheckSwitchStates()
+    {
+        if(context.Health <= 0)
+        {
+            SwitchState(context.deadState);
+        }
     }
 }
