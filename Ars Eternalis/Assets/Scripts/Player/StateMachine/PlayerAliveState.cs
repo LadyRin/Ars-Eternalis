@@ -73,10 +73,7 @@ public abstract class PlayerAliveState : PlayerBaseState
 
     private void TrySendThroughTime()
     {
-        Debug.Log("Trying to send through time");
-        Debug.Log("Health percentage " + context.Health / context.MaxHealth);
-        Debug.Log("pressing ability 3: " + context.IsAbility3);
-        Debug.Log("ability 3 usable: " + context.IsAbility3Usable);
+
         if(context.IsAbility3 && context.Health > .6 * context.MaxHealth && context.IsAbility3Usable)
         {
             Debug.Log("Condition met");
