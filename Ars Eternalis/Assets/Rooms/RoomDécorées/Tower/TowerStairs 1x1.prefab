@@ -5636,6 +5636,56 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3608648171101017689, guid: e4b570bae624ccb44bd100abdc1cc9ff, type: 3}
+--- !u!1 &4950332090973304308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 124802016276511522}
+  m_Layer: 0
+  m_Name: shelf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &124802016276511522
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4950332090973304308}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 30, z: 15}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8963364412306131141}
+  - {fileID: 2176862235627274364}
+  - {fileID: 7598091002162517598}
+  - {fileID: 5903650266366751664}
+  - {fileID: 2173513376947387440}
+  - {fileID: 1537373920721396595}
+  - {fileID: 689125794802842380}
+  - {fileID: 7450700236712951187}
+  - {fileID: 524717551649636769}
+  - {fileID: 4530800392307826365}
+  - {fileID: 7036556311567727411}
+  - {fileID: 2382676317487730333}
+  - {fileID: 8263782476106081537}
+  - {fileID: 632487791390767814}
+  - {fileID: 837296437609253464}
+  - {fileID: 6126199697139347660}
+  - {fileID: 7868018554033900762}
+  - {fileID: 8509007644941725706}
+  - {fileID: 8122544393509785602}
+  m_Father: {fileID: 8372884762783851249}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5041781502548800149
 GameObject:
   m_ObjectHideFlags: 0
@@ -7626,6 +7676,8 @@ Transform:
   - {fileID: 1850567618765681835}
   - {fileID: 2909347187935047984}
   - {fileID: 6785165467136537526}
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+=======
   - {fileID: 2176862235627274364}
   - {fileID: 7598091002162517598}
   - {fileID: 5903650266366751664}
@@ -7644,6 +7696,7 @@ Transform:
   - {fileID: 7868018554033900762}
   - {fileID: 8509007644941725706}
   - {fileID: 8122544393509785602}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
   m_Father: {fileID: 8372884762783851249}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8520,9 +8573,14 @@ Transform:
   - {fileID: 8244822408556366577}
   - {fileID: 6491508483433870124}
   - {fileID: 4977611035602257904}
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+  - {fileID: 124802016276511522}
+  - {fileID: 8572399903691600455}
+=======
   - {fileID: 8572399903691600455}
   - {fileID: 6821264061224109480}
   - {fileID: 5782192116530341393}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9545,12 +9603,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+    m_TransformParent: {fileID: 124802016276511522}
+=======
     m_TransformParent: {fileID: 8572399903691600455}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
     m_Modifications:
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
@@ -9560,12 +9622,16 @@ PrefabInstance:
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5636156
+      value: -28.436384
       objectReference: {fileID: 0}
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 6.98575
+=======
       value: -0.89932954
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
@@ -10473,7 +10539,7 @@ PrefabInstance:
     - target: {fileID: 4512843078935962322, guid: 78a6322202d728c4dad20578400aa542,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4512843078935962322, guid: 78a6322202d728c4dad20578400aa542,
         type: 3}
@@ -10664,7 +10730,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+    m_TransformParent: {fileID: 124802016276511522}
+=======
     m_TransformParent: {fileID: 8572399903691600455}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
     m_Modifications:
     - target: {fileID: 7432622557476056704, guid: 97b1fc751708ca940b2c1b6634c7312f,
         type: 3}
@@ -10684,12 +10754,16 @@ PrefabInstance:
     - target: {fileID: 7432622557476287136, guid: 97b1fc751708ca940b2c1b6634c7312f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14
+      value: -29.86
       objectReference: {fileID: 0}
     - target: {fileID: 7432622557476287136, guid: 97b1fc751708ca940b2c1b6634c7312f,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 6.91
+=======
       value: -0.8402526
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 7432622557476287136, guid: 97b1fc751708ca940b2c1b6634c7312f,
         type: 3}
@@ -10991,7 +11065,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+    m_TransformParent: {fileID: 124802016276511522}
+=======
     m_TransformParent: {fileID: 8572399903691600455}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
     m_Modifications:
     - target: {fileID: 3875462458774234132, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
@@ -11001,7 +11079,7 @@ PrefabInstance:
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
@@ -11011,12 +11089,16 @@ PrefabInstance:
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.987
+      value: -28.013
       objectReference: {fileID: 0}
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 7.0636635
+=======
       value: -0.9969932
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
@@ -11405,12 +11487,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+    m_TransformParent: {fileID: 124802016276511522}
+=======
     m_TransformParent: {fileID: 8572399903691600455}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
     m_Modifications:
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
@@ -11420,12 +11506,16 @@ PrefabInstance:
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.551
+      value: -28.449
       objectReference: {fileID: 0}
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 6.98575
+=======
       value: -0.9206569
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
@@ -11795,7 +11885,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+    m_TransformParent: {fileID: 124802016276511522}
+=======
     m_TransformParent: {fileID: 8572399903691600455}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
     m_Modifications:
     - target: {fileID: 3875462458774234132, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
@@ -11805,7 +11899,7 @@ PrefabInstance:
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
@@ -11815,12 +11909,16 @@ PrefabInstance:
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.987
+      value: -28.013
       objectReference: {fileID: 0}
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 7.0636635
+=======
       value: -0.9890724
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
@@ -11870,7 +11968,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+    m_TransformParent: {fileID: 124802016276511522}
+=======
     m_TransformParent: {fileID: 8572399903691600455}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
     m_Modifications:
     - target: {fileID: 3875462458774234132, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
@@ -11880,7 +11982,7 @@ PrefabInstance:
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
@@ -11890,12 +11992,16 @@ PrefabInstance:
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: -28
       objectReference: {fileID: 0}
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 7.0636635
+=======
       value: -0.97271705
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
@@ -12272,7 +12378,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+    m_TransformParent: {fileID: 124802016276511522}
+=======
     m_TransformParent: {fileID: 8572399903691600455}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
     m_Modifications:
     - target: {fileID: 4392081859372299703, guid: cf628d0e2b7cced4b9253fa9e5de6bbb,
         type: 3}
@@ -12282,7 +12392,7 @@ PrefabInstance:
     - target: {fileID: 4392081859372460439, guid: cf628d0e2b7cced4b9253fa9e5de6bbb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4392081859372460439, guid: cf628d0e2b7cced4b9253fa9e5de6bbb,
         type: 3}
@@ -12292,12 +12402,16 @@ PrefabInstance:
     - target: {fileID: 4392081859372460439, guid: cf628d0e2b7cced4b9253fa9e5de6bbb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.952
+      value: -29.048
       objectReference: {fileID: 0}
     - target: {fileID: 4392081859372460439, guid: cf628d0e2b7cced4b9253fa9e5de6bbb,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 6.9850197
+=======
       value: -0.9184433
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4392081859372460439, guid: cf628d0e2b7cced4b9253fa9e5de6bbb,
         type: 3}
@@ -12493,7 +12607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 82764dd0e9989d24c92888297a16e00f, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 82764dd0e9989d24c92888297a16e00f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12505,7 +12619,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 82764dd0e9989d24c92888297a16e00f, type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 7.091823
+=======
       value: 7.091822
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 82764dd0e9989d24c92888297a16e00f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -12513,7 +12631,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 82764dd0e9989d24c92888297a16e00f, type: 3}
       propertyPath: m_LocalRotation.x
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: -3.2422087e-10
+=======
       value: -3.2422084e-10
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 82764dd0e9989d24c92888297a16e00f, type: 3}
       propertyPath: m_LocalRotation.y
@@ -12611,7 +12733,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+    m_TransformParent: {fileID: 124802016276511522}
+=======
     m_TransformParent: {fileID: 8572399903691600455}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
     m_Modifications:
     - target: {fileID: 4392081859372299703, guid: cf628d0e2b7cced4b9253fa9e5de6bbb,
         type: 3}
@@ -12621,7 +12747,7 @@ PrefabInstance:
     - target: {fileID: 4392081859372460439, guid: cf628d0e2b7cced4b9253fa9e5de6bbb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4392081859372460439, guid: cf628d0e2b7cced4b9253fa9e5de6bbb,
         type: 3}
@@ -12631,12 +12757,16 @@ PrefabInstance:
     - target: {fileID: 4392081859372460439, guid: cf628d0e2b7cced4b9253fa9e5de6bbb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.952
+      value: -29.048
       objectReference: {fileID: 0}
     - target: {fileID: 4392081859372460439, guid: cf628d0e2b7cced4b9253fa9e5de6bbb,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 6.9850197
+=======
       value: -0.9258598
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4392081859372460439, guid: cf628d0e2b7cced4b9253fa9e5de6bbb,
         type: 3}
@@ -12686,12 +12816,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+    m_TransformParent: {fileID: 124802016276511522}
+=======
     m_TransformParent: {fileID: 8572399903691600455}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
     m_Modifications:
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
@@ -12701,12 +12835,16 @@ PrefabInstance:
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5636156
+      value: -28.436384
       objectReference: {fileID: 0}
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 6.98575
+=======
       value: -0.90549755
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
@@ -12836,7 +12974,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+    m_TransformParent: {fileID: 124802016276511522}
+=======
     m_TransformParent: {fileID: 8572399903691600455}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
     m_Modifications:
     - target: {fileID: 3875462458774234132, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
@@ -12846,7 +12988,7 @@ PrefabInstance:
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
@@ -12856,12 +12998,16 @@ PrefabInstance:
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.987
+      value: -28.013
       objectReference: {fileID: 0}
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 7.0636635
+=======
       value: -1.003846
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
@@ -12996,7 +13142,7 @@ PrefabInstance:
     - target: {fileID: 7200927917085622770, guid: f92eb4acd3d48d64d8ce1fceed3a33a3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7200927917085622770, guid: f92eb4acd3d48d64d8ce1fceed3a33a3,
         type: 3}
@@ -13501,12 +13647,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+    m_TransformParent: {fileID: 124802016276511522}
+=======
     m_TransformParent: {fileID: 8572399903691600455}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
     m_Modifications:
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
@@ -13516,12 +13666,16 @@ PrefabInstance:
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.201
+      value: -29.799
       objectReference: {fileID: 0}
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 6.9969788
+=======
       value: -0.92720467
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
@@ -13702,7 +13856,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+    m_TransformParent: {fileID: 124802016276511522}
+=======
     m_TransformParent: {fileID: 8572399903691600455}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
     m_Modifications:
     - target: {fileID: 4392081859372299703, guid: cf628d0e2b7cced4b9253fa9e5de6bbb,
         type: 3}
@@ -13712,7 +13870,7 @@ PrefabInstance:
     - target: {fileID: 4392081859372460439, guid: cf628d0e2b7cced4b9253fa9e5de6bbb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4392081859372460439, guid: cf628d0e2b7cced4b9253fa9e5de6bbb,
         type: 3}
@@ -13722,12 +13880,16 @@ PrefabInstance:
     - target: {fileID: 4392081859372460439, guid: cf628d0e2b7cced4b9253fa9e5de6bbb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.952
+      value: -29.048
       objectReference: {fileID: 0}
     - target: {fileID: 4392081859372460439, guid: cf628d0e2b7cced4b9253fa9e5de6bbb,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 6.9850197
+=======
       value: -0.908761
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 4392081859372460439, guid: cf628d0e2b7cced4b9253fa9e5de6bbb,
         type: 3}
@@ -14520,12 +14682,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+    m_TransformParent: {fileID: 124802016276511522}
+=======
     m_TransformParent: {fileID: 8572399903691600455}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
     m_Modifications:
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
@@ -14535,12 +14701,16 @@ PrefabInstance:
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.201
+      value: -29.799
       objectReference: {fileID: 0}
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 6.9969788
+=======
       value: -0.94203764
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
@@ -14595,7 +14765,11 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+    m_TransformParent: {fileID: 124802016276511522}
+=======
     m_TransformParent: {fileID: 8572399903691600455}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
     m_Modifications:
     - target: {fileID: 3875462458774234132, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
@@ -14605,7 +14779,7 @@ PrefabInstance:
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
@@ -14615,12 +14789,16 @@ PrefabInstance:
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.003
+      value: -27.997
       objectReference: {fileID: 0}
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 7.0636635
+=======
       value: -0.978007
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
@@ -14733,12 +14911,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+    m_TransformParent: {fileID: 124802016276511522}
+=======
     m_TransformParent: {fileID: 8572399903691600455}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
     m_Modifications:
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
@@ -14748,12 +14930,16 @@ PrefabInstance:
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.201
+      value: -29.799
       objectReference: {fileID: 0}
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 6.9969788
+=======
       value: -0.93462116
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
@@ -15123,12 +15309,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+    m_TransformParent: {fileID: 124802016276511522}
+=======
     m_TransformParent: {fileID: 8572399903691600455}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
     m_Modifications:
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
@@ -15138,12 +15328,16 @@ PrefabInstance:
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5636156
+      value: -28.436384
       objectReference: {fileID: 0}
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 6.98575
+=======
       value: -0.89932954
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
@@ -15336,7 +15530,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 8372884762783851249}
+    m_TransformParent: {fileID: 124802016276511522}
     m_Modifications:
     - target: {fileID: 3711368940684764181, guid: b1bddf7133e6367c59b8bc54a049a641,
         type: 3}
@@ -15421,7 +15615,7 @@ PrefabInstance:
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
@@ -15431,12 +15625,16 @@ PrefabInstance:
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.989
+      value: -28.011
       objectReference: {fileID: 0}
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 7.0636635
+=======
       value: -0.98358417
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 3875462458774534196, guid: dc2e8012cfb67d746b426569807dbf62,
         type: 3}
@@ -15687,12 +15885,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+    m_TransformParent: {fileID: 124802016276511522}
+=======
     m_TransformParent: {fileID: 8572399903691600455}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
     m_Modifications:
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
@@ -15702,12 +15904,16 @@ PrefabInstance:
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.551
+      value: -28.449
       objectReference: {fileID: 0}
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 6.98575
+=======
       value: -0.91205376
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 491646786415538755, guid: 7194bc8a1663f2b48b3b677ad957ddb4,
         type: 3}
@@ -15951,7 +16157,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 8372884762783851249}
+    m_TransformParent: {fileID: 8572399903691600455}
     m_Modifications:
     - target: {fileID: 3711368940684764181, guid: b1bddf7133e6367c59b8bc54a049a641,
         type: 3}
@@ -16031,7 +16237,7 @@ PrefabInstance:
     - target: {fileID: 8387812288188927564, guid: bb5648988cfbc61429f764a24ec0879d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8387812288188927564, guid: bb5648988cfbc61429f764a24ec0879d,
         type: 3}
@@ -17176,12 +17382,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+    m_TransformParent: {fileID: 124802016276511522}
+=======
     m_TransformParent: {fileID: 8572399903691600455}
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
     m_Modifications:
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
@@ -17191,12 +17401,16 @@ PrefabInstance:
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.201
+      value: -29.799
       objectReference: {fileID: 0}
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
       propertyPath: m_LocalPosition.z
+<<<<<<< HEAD:Ars Eternalis/Assets/Rooms/RoomDécorées/TowerStairs 1x1.prefab
+      value: 6.9969788
+=======
       value: -0.9197882
+>>>>>>> 00218cecc042726ee78c8fb9d3eb68f8265d4f43:Ars Eternalis/Assets/Rooms/RoomDécorées/Tower/TowerStairs 1x1.prefab
       objectReference: {fileID: 0}
     - target: {fileID: 3121784523027337349, guid: f9db8e918a448ac439fe3e01278fe1ce,
         type: 3}
