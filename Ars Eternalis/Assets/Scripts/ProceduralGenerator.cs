@@ -8,12 +8,12 @@ public class ProceduralGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject[] prefabs;
     private bool[][][] map = new bool[100][][];
-    
+
     void Start()
     {
         for (int i = 0; i < map.Length; i++)
         {
-            bool [][] zMap = new bool[100][];
+            bool[][] zMap = new bool[100][];
             for (int j = 0; j < zMap.Length; j++)
             {
                 zMap[j] = new bool[2];
@@ -27,16 +27,16 @@ public class ProceduralGenerator : MonoBehaviour
     void AddCenter()
     {
         map[50][50][0] = true;
-        GameObject center = Instantiate(prefabs[0], new Vector3(0, 0, 0), Quaternion.identity);
+        GameObject center = Instantiate(prefabs[Random.Range(1, 12)], new Vector3(0, 0, 0), Quaternion.identity);
         var sorties = center.GetComponentsInChildren<Sortie>();
         Debug.Log(sorties.Length);
         foreach (var sortie in sorties)
         {
-            sortie.CreateRoom(prefabs[Random.Range(0, prefabs.Length)]);
+            sortie.CreateRoom(prefabs[13]); //Random.Range(0, prefabs.Length)
         }
     }
 
-    
+
 
 
 }
