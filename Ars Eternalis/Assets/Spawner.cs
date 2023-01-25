@@ -7,7 +7,7 @@ public class Spawner : MonoBehaviour
 
     [SerializeField] float radius;
 
-    [SerializeField] static GameObject[] prefabs;
+    public static GameObject[] enemies;
     [SerializeField] float spawnTimeDiff;
 
     float spawnNumber = 0;
@@ -30,8 +30,8 @@ public class Spawner : MonoBehaviour
     void Spawn() {
         Vector2 r = Random.insideUnitCircle * radius;   
         Vector3 pos = new Vector3(r.x, 0, r.y);
-        int prefabIndex = Random.Range(0, prefabs.Length);
-        Instantiate(prefabs[prefabIndex], transform.position + pos, Quaternion.identity);        
+        int prefabIndex = Random.Range(0, enemies.Length);
+        Instantiate(enemies[prefabIndex], transform.position + pos, Quaternion.identity);        
     }
 
     void OnDrawGizmosSelected()

@@ -64,7 +64,6 @@ public class PlayerStateMachine : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -156,4 +155,22 @@ public class PlayerStateMachine : MonoBehaviour
     public float MaxAirSpeed {get {return maxAirSpeed;}}
     public Weapon activeWeapon {get {return GetComponentInChildren<Weapon>();}}
 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("EnemyMeleeHitbox"))
+        {
+            EnemyStateMachine enemy = other.GetComponentInParent<EnemyStateMachine>();
+            if (enemy != null)
+            {
+                health -= enemy.AttackDamage;
+                hudManager?.SetHealth(health);
+                if (health <= 0)
+                {
+                    currentState = deadState;
+                    currentState.EnterState();
+                }
+            }
+        }
+    }
 }
