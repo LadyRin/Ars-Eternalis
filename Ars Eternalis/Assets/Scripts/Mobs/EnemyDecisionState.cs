@@ -7,29 +7,25 @@ public class EnemyDecisionState : EnemyBaseState
     public EnemyDecisionState(EnemyStateMachine currentContext) : base(currentContext) { }
     public override void EnterState()
     {
-        if(context.IsMelee)
+        if (context.IsMelee && Vector3.Distance(context.transform.position, context.Player.position) <= context.AttackRange)
         {
-            if(Vector3.Distance(context.transform.position, context.Player.position) < context.AttackRange)
-            {
-                SwitchState(context.meleeAttackState);
-            }
-            else
-            {
-                SwitchState(context.travelingState);
-            }
+            SwitchState(context.meleeAttackState);
+            return;
         }
-        else
+
+        SwitchState(context.travelingState);
+    }
+    public override void UpdateState()
+    {
+        SwitchState(context.travelingState);
+    }
+    public override void ExitState() { }
+
+    public override void CheckSwitchStates()
+    {
+        if (context.Health <= 0)
         {
-            if (Vector3.Distance(context.transform.position, context.Player.position) > context.AttackRange)
-            {
-                SwitchState(context.rangedAttackState);
-            }
-            else
-            {
-                SwitchState(context.travelingState);
-            }
+            SwitchState(context.deadState);
         }
     }
-    public override void UpdateState() { }
-    public override void ExitState() { }    
 }

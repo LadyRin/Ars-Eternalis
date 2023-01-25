@@ -59,7 +59,6 @@ public class PlayerStateMachine : MonoBehaviour
     
         currentState = groundedState;
         currentState.EnterState();
-        Debug.Log("Current State: " + currentState);
     }
 
     // Start is called before the first frame update
