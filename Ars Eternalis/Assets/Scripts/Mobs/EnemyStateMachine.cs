@@ -7,23 +7,27 @@ public class EnemyStateMachine : MonoBehaviour, IDamageable, IShootable
     NavMeshAgent agent;
     Animator animator;
     Collider meleeHitbox;
-
+    GameObject projectile;
+    [SerializeField] GameObject deathParticleSystem;
+    [SerializeField] GameObject bloodParticleSystem;
     [SerializeField] bool isMelee;
     [SerializeField] float attackRange;
     [SerializeField] float attackDamage;
     [SerializeField] float attackDelayStart;
     [SerializeField] float attackDuration;
     [SerializeField] float attackDelayEnd;
+    [SerializeField] float health;
     EnemyBaseState currentState;
 
-    public EnemyBaseState trackingState;
+    public EnemyBaseState decisionState;
     public EnemyBaseState meleeAttackState;
     public EnemyBaseState rangedAttackState;
     public EnemyBaseState travelingState;
     public EnemyBaseState deadState;
 
-    void InitStates() {
-        trackingState = new EnemyTrackingState(this);
+    void InitStates()
+    {
+        decisionState = new EnemyDecisionState(this);
         meleeAttackState = new EnemyMeleeAttackState(this);
         rangedAttackState = new EnemyRangedAttackState(this);
         travelingState = new EnemyTravelingState(this);
@@ -38,17 +42,25 @@ public class EnemyStateMachine : MonoBehaviour, IDamageable, IShootable
 
         InitStates();
 
-        currentState = trackingState;
+        currentState = decisionState;
+    }
+
+    void Update()
+    {
+        currentState.UpdateState();
+        currentState.CheckSwitchStates();
     }
 
     public void GetShot(Vector3 hitPoint, Collider hitCollider, float damage)
     {
-        throw new System.NotImplementedException();
+        TakeDamage(damage);
+        GameObject blood = Instantiate(bloodParticleSystem, hitPoint, Quaternion.identity);
+        Destroy(blood, 2f);
     }
 
     public void TakeDamage(float damage)
     {
-        throw new System.NotImplementedException();
+        health -= damage;
     }
 
     public EnemyBaseState CurrentState { get => currentState; set => currentState = value; }
@@ -62,8 +74,7 @@ public class EnemyStateMachine : MonoBehaviour, IDamageable, IShootable
     public float AttackDelayStart { get => attackDelayStart; set => attackDelayStart = value; }
     public float AttackDuration { get => attackDuration; set => attackDuration = value; }
     public float AttackDelayEnd { get => attackDelayEnd; set => attackDelayEnd = value; }
-    
-
-
-   
+    public float Health { get => health; set => health = value; }
+    public GameObject Projectile { get => projectile; set => projectile = value; }
+    public GameObject DeathParticleSystem { get => deathParticleSystem; set => deathParticleSystem = value; }
 }
