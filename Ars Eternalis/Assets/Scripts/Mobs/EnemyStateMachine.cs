@@ -1,7 +1,8 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyStateMachine : MonoBehaviour, IDamageable, IShootable
+public class EnemyStateMachine : MonoBehaviour, IDamageable, IShootable, IFreezable
 {
     Transform player;
     NavMeshAgent agent;
@@ -51,7 +52,6 @@ public class EnemyStateMachine : MonoBehaviour, IDamageable, IShootable
     {
         currentState.UpdateState();
         currentState.CheckSwitchStates();
-        Debug.Log("Current state: " + currentState);
     }
 
     public void GetShot(Vector3 hitPoint, Collider hitCollider, float damage)
@@ -64,6 +64,21 @@ public class EnemyStateMachine : MonoBehaviour, IDamageable, IShootable
     public void TakeDamage(float damage)
     {
         health -= damage;
+    }
+
+    public void Freeze()
+    {
+        Debug.Log("Freeze");
+        agent.isStopped = true;
+        animator.enabled = false;
+        StartCoroutine(Unfreeze());
+    }
+
+    private IEnumerator Unfreeze()
+    {
+        yield return new WaitForSeconds(4f);
+        agent.isStopped = false;
+        animator.enabled = true;
     }
 
     public EnemyBaseState CurrentState { get => currentState; set => currentState = value; }
