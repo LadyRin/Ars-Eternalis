@@ -12,7 +12,7 @@ public abstract class PlayerAliveState : PlayerBaseState
         Move();
         Fire();
         TrySendThroughTime();
-        FreezeAgility();
+        FreezeAbility();
     }
 
     private void Fire()
@@ -23,27 +23,25 @@ public abstract class PlayerAliveState : PlayerBaseState
         }
     }
 
-    private void FreezeAgility()
+    private void FreezeAbility()
     {
         if (!context.IsAbility1 || context.IsFreezeReloading) return;
+
+        Debug.Log("Attempting to freeze");
         
         Ray ray = context.TrueCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
         RaycastHit hit;
         Vector3 endPoint = new Vector3(0, 0, 0);
         if (Physics.Raycast(ray, out hit, 100f))
         {
-            IFreezable freezable = hit.collider.GetComponent<IFreezable>();
+            Debug.Log("Raycast hit");
+            IFreezable freezable = hit.collider.GetComponentInParent<IFreezable>();
             if (freezable != null)
             {
                 freezable.Freeze();
+                context.StartCoroutine(FreezingDelay());
             }
-            //endPoint = hit.point;
-        } else
-        {
-            //endPoint = ray.GetPoint(100f);
         }
-        
-        context.StartCoroutine(FreezingDelay());
     }
 
     private void Look()
@@ -73,7 +71,6 @@ public abstract class PlayerAliveState : PlayerBaseState
 
     private void TrySendThroughTime()
     {
-
         if(context.IsAbility3 && context.Health > .6 * context.MaxHealth && context.IsAbility3Usable)
         {
             Debug.Log("Condition met");

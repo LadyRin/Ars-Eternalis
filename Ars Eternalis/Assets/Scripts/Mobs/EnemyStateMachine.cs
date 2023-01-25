@@ -1,13 +1,14 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyStateMachine : MonoBehaviour, IDamageable, IShootable
+public class EnemyStateMachine : MonoBehaviour, IDamageable, IShootable, IFreezable
 {
     Transform player;
     NavMeshAgent agent;
     Animator animator;
-    Collider meleeHitbox;
-    GameObject projectile;
+    [SerializeField] Collider meleeHitbox;
+    [SerializeField] GameObject projectile;
     [SerializeField] GameObject deathParticleSystem;
     [SerializeField] GameObject bloodParticleSystem;
     [SerializeField] bool isMelee;
@@ -19,11 +20,12 @@ public class EnemyStateMachine : MonoBehaviour, IDamageable, IShootable
     [SerializeField] float health;
     EnemyBaseState currentState;
 
-    public EnemyBaseState decisionState;
-    public EnemyBaseState meleeAttackState;
-    public EnemyBaseState rangedAttackState;
-    public EnemyBaseState travelingState;
-    public EnemyBaseState deadState;
+    
+    [HideInInspector] public EnemyBaseState decisionState;
+    [HideInInspector] public EnemyBaseState meleeAttackState;
+    [HideInInspector] public EnemyBaseState rangedAttackState;
+    [HideInInspector] public EnemyBaseState travelingState;
+    [HideInInspector] public EnemyBaseState deadState;
 
     void InitStates()
     {
@@ -43,6 +45,7 @@ public class EnemyStateMachine : MonoBehaviour, IDamageable, IShootable
         InitStates();
 
         currentState = decisionState;
+        currentState.EnterState();
     }
 
     void Update()
@@ -61,6 +64,21 @@ public class EnemyStateMachine : MonoBehaviour, IDamageable, IShootable
     public void TakeDamage(float damage)
     {
         health -= damage;
+    }
+
+    public void Freeze()
+    {
+        Debug.Log("Freeze");
+        agent.isStopped = true;
+        animator.enabled = false;
+        StartCoroutine(Unfreeze());
+    }
+
+    private IEnumerator Unfreeze()
+    {
+        yield return new WaitForSeconds(4f);
+        agent.isStopped = false;
+        animator.enabled = true;
     }
 
     public EnemyBaseState CurrentState { get => currentState; set => currentState = value; }
