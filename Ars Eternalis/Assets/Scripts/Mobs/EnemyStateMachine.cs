@@ -6,8 +6,8 @@ public class EnemyStateMachine : MonoBehaviour, IDamageable, IShootable
     Transform player;
     NavMeshAgent agent;
     Animator animator;
-    Collider meleeHitbox;
-    GameObject projectile;
+    [SerializeField] Collider meleeHitbox;
+    [SerializeField] GameObject projectile;
     [SerializeField] GameObject deathParticleSystem;
     [SerializeField] GameObject bloodParticleSystem;
     [SerializeField] bool isMelee;
@@ -19,11 +19,12 @@ public class EnemyStateMachine : MonoBehaviour, IDamageable, IShootable
     [SerializeField] float health;
     EnemyBaseState currentState;
 
-    public EnemyBaseState decisionState;
-    public EnemyBaseState meleeAttackState;
-    public EnemyBaseState rangedAttackState;
-    public EnemyBaseState travelingState;
-    public EnemyBaseState deadState;
+    
+    [HideInInspector] public EnemyBaseState decisionState;
+    [HideInInspector] public EnemyBaseState meleeAttackState;
+    [HideInInspector] public EnemyBaseState rangedAttackState;
+    [HideInInspector] public EnemyBaseState travelingState;
+    [HideInInspector] public EnemyBaseState deadState;
 
     void InitStates()
     {
@@ -43,12 +44,14 @@ public class EnemyStateMachine : MonoBehaviour, IDamageable, IShootable
         InitStates();
 
         currentState = decisionState;
+        currentState.EnterState();
     }
 
     void Update()
     {
         currentState.UpdateState();
         currentState.CheckSwitchStates();
+        Debug.Log("Current state: " + currentState);
     }
 
     public void GetShot(Vector3 hitPoint, Collider hitCollider, float damage)

@@ -73,7 +73,6 @@ public abstract class PlayerAliveState : PlayerBaseState
 
     private void TrySendThroughTime()
     {
-
         if(context.IsAbility3 && context.Health > .6 * context.MaxHealth && context.IsAbility3Usable)
         {
             Debug.Log("Condition met");
